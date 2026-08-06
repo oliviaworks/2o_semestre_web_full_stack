@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> <!-- informações que ajudam a renderizar o site, configurações iniciais enviadas para o motor do browser-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliações | Lugares</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>  <!-- Tudo que que é renderizado no site está dentro do body -->
+    <header class="cabecalho">
+        <a href="#" class="cabecalho_logo">Avaliações</a>
+        <nav class="cabecalho_nav"> <!-- nav é tudo que é um menu-->
+            <a href="index.html">Lugares</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="titulo_pagina">Lugares avaliados</h1>
+        <p class="subtitulo_pagina">Descubra e avalie lugares recomendados pela comunidade!</p>
+
+        <section class="cards_grid">
+            <article class="card" data_categoria="cafeteria">
+                <div class="card_banner">☕</div>
+                <div class="card_body">
+                    <span class="badge">Cafeteria</span>
+                    <h2 class="card_title">Café Aroma</h2>
+                    <p class="card_cidade">📍 Osasco</p>
+                    <p class="card_descricao">Cafeteria aconchegante com grão especiais e ambiente para trabalhar</p>
+                    <a href="detalhe.html" class="card_link">Ver detalhes</a>
+                </div>
+            </article>
+            <article class="card" data_categoria="parque">
+                <div class="card_banner">🌳</div>
+                <div class="card_body">
+                    <span class="badge">Parque</span>
+                    <h2 class="card_title">Parque Villa-Lobos</h2>
+                    <p class="card_cidade">📍 Jaguaré</p>
+                    <p class="card_descricao">Parque para praticar esportes</p>
+                    <a href="detalhe.html" class="card_link">Ver detalhes</a>
+                </div>
+            </article>
+            <article class="card" data_categoria="museu">
+                <div class="card_banner">🏦</div>
+                <div class="card_body">
+                    <span class="badge">Museu</span>
+                    <h2 class="card_title">Museu das imagens</h2>
+                    <p class="card_cidade">📍 São Paulo</p>
+                    <p class="card_descricao">Museu para ver imagens</p>
+                    <a href="detalhe.html" class="card_link">Ver detalhes</a>
+                </div>
+            </article>
+            <article class="card" data_categoria="restaurante">
+                <div class="card_banner">🍽️</div>
+                <div class="card_body">
+                    <span class="badge">Restaurante</span>
+                    <h2 class="card_title">Sabor Caseiro</h2>
+                    <p class="card_cidade">📍 São Paulo</p>
+                    <p class="card_descricao">Comida muito boa!</p>
+                    <a href="detalhe.html" class="card_link">Ver detalhes</a>
+                </div>
+            </article>
+            <article class="card" data_categoria="livraria">
+                <div class="card_banner">📖</div>
+                <div class="card_body">
+                    <span class="badge">Livraria</span>
+                    <h2 class="card_title">Página Viva</h2>
+                    <p class="card_cidade">📍 Rio de Janeiro</p>
+                    <p class="card_descricao">Livros muito diversificados e interessantes!</p>
+                    <a href="detalhe.html" class="card_link">Ver detalhes</a>
+                </div>
+            </article>
+            <article class="card" data_categoria="cinema">
+                <div class="card_banner">📽️</div>
+                <div class="card_body">
+                    <span class="badge">Cinema</span>
+                    <h2 class="card_title">CineEstrela</h2>
+                    <p class="card_cidade">📍 São Paulo</p>
+                    <p class="card_descricao">Cinema de rua com sessões de filmes clássicos</p>
+                    <a href="detalhe.html" class="card_link">Ver detalhes</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="rodape">
+        <p>Projeto de referência do curso CCOMP - Aula 01</p>
+    </footer>
+</body>
+</html>

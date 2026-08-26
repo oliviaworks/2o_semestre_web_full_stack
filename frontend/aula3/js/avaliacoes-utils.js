@@ -13,6 +13,15 @@ function calcularMedia(avaliacoes) {
   // quantidade de avaliações. Se o array estiver vazio, retorne 0 (evite
   // dividir por zero). Arredonde o resultado para 1 casa decimal — dica:
   // Math.round(valor * 10) / 10.
+  if (!avaliacoes || avaliacoes.length === 0) {
+    return 0
+  }
+
+  const soma = avaliacoes.reduce(function(total, avaliacao){ // reduzir os itens do array a um valor só
+    return total + avaliacao.nota // somar itens de um array
+  }, 0) // o zero é o valor inicial do contador/acumulator (total)
+
+  return Math.round((soma/avaliacoes.length) * 10) / 10 // gambiarra pra arredondar a média para uma casa decimal
 }
 
 /**
@@ -23,6 +32,9 @@ function calcularMedia(avaliacoes) {
 function filtrarPorLugar(avaliacoes, lugarId) {
   // TODO (Aula 03): use Array.prototype.filter para retornar apenas as
   // avaliações cujo `lugarId` seja igual ao parâmetro recebido.
+  return avaliacoes.filter(function(avaliacao){
+    return avaliacao.lugarId === lugarId // filtra o array com base em uma condição
+  })
 }
 
 /**
@@ -33,6 +45,9 @@ function filtrarPorLugar(avaliacoes, lugarId) {
 function filtrarPorNotaMinima(avaliacoes, notaMinima) {
   // TODO (Aula 03): use Array.prototype.filter para retornar apenas as
   // avaliações cuja `nota` seja maior ou igual a `notaMinima`.
+  return avaliacoes.filter(function(avaliacao){
+    return avaliacao.nota >= notaMinima
+  })
 }
 
 /**
@@ -40,6 +55,8 @@ function filtrarPorNotaMinima(avaliacoes, notaMinima) {
  * @param {Array<{nota:number}>} avaliacoes
  * @param {"asc"|"desc"} [ordem="desc"]
  */
+
+// professor vai explicar depois
 function ordenarPorNota(avaliacoes, ordem) {
   // TODO (Aula 03): NÃO ordene o array recebido diretamente (isso
   // mudaria o array original, o que é um efeito colateral indesejado).
@@ -49,4 +66,12 @@ function ordenarPorNota(avaliacoes, ordem) {
   //   3. Se `ordem` for "asc", a menor nota vem primeiro; caso
   //      contrário (padrão "desc"), a maior nota vem primeiro.
   //   4. Retorne a cópia ordenada.
+  ordem = ordem || "desc"
+  const copia = avaliacoes.slice()
+
+  copia.sort(function(a, b){
+    return ordem === "asc" ? a.nota - b.nota : b.nota - a.nota 
+  })
+
+  return copia
 }

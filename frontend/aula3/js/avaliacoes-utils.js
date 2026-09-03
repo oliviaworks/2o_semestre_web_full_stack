@@ -56,7 +56,6 @@ function filtrarPorNotaMinima(avaliacoes, notaMinima) {
  * @param {"asc"|"desc"} [ordem="desc"]
  */
 
-// professor vai explicar depois
 function ordenarPorNota(avaliacoes, ordem) {
   // TODO (Aula 03): NÃO ordene o array recebido diretamente (isso
   // mudaria o array original, o que é um efeito colateral indesejado).

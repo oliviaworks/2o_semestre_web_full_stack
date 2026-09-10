@@ -14,5 +14,17 @@ class Avaliacao {
     //
     // Se passar, atribua this.id, this.nota, this.comentario,
     // this.lugar e this.usuario.
+    if (!Number.isInteger(nota) || nota < 1 || nota > 5) {
+      throw new ErroValidacao("A nota deve ser um número inteiro entre 1 e 5", "nota")
+    }
+    if (comentario.trim().length < 3) {
+      throw new ErroValidacao("O comentário deve ter pelo menos 3 caracteres")
+    }
+    if (!(lugar instanceof Lugar)) {
+      throw new ErroValidacao("A avaliação precisa estar associada a um lugar válido")
+    }
+    if (!(usuario instanceof Usuario)) {
+      throw new ErroValidacao("A avaliação precisa estar associada a um usuário válido")
+    }
   }
 }
